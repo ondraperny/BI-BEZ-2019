@@ -1,0 +1,3 @@
+/mnt/c/Users/ondra/Desktop/BEZ/1_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/ondra/Desktop/BEZ/1_assignment/cmake-build-debug/CMakeFiles/1_assignment.dir
+/mnt/c/Users/ondra/Desktop/BEZ/1_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/ondra/Desktop/BEZ/1_assignment/main.cpp
+stdio.h
+-
+string.h
+-
+openssl/evp.h
+-
+limits.h
+-
+iostream
+-
+
