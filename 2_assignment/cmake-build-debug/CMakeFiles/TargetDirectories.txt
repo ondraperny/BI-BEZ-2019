@@ -1,0 +1,3 @@
+C:/Users/ondra/Desktop/BEZ/2_assignment/cmake-build-debug/CMakeFiles/2_assignment.dir
+C:/Users/ondra/Desktop/BEZ/2_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ondra/Desktop/BEZ/2_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
