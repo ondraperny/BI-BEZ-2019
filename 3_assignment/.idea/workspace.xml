@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="2_assignment" targetName="2_assignment" />
+      <config projectName="3_assignment" targetName="3_assignment" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,7 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b15bd570-ff1a-411a-9608-8800ef7823e9" name="Default Changelist" comment="" />
+    <list default="true" id="d5024e19-4d16-4687-b743-f77ac5c060fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../2_assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../2_assignment/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,18 +32,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+            <state relative-caret-position="651">
+              <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
+              <folding>
+                <element signature="e#47#66#0" expanded="true" />
+                <marker date="1554226697129" expanded="true" signature="3865:4118" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/basic_string.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="5261" selection-start-line="5261" selection-end-line="5261" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>stringLength</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -64,8 +74,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="3_assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3_assignment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="3_assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="3_assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -87,7 +112,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="2_assignment" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="2_assignment" TARGET_NAME="2_assignment" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="2_assignment" RUN_TARGET_NAME="2_assignment">
+    <configuration name="3_assignment" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="3_assignment" TARGET_NAME="3_assignment" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="3_assignment" RUN_TARGET_NAME="3_assignment">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -98,47 +123,49 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b15bd570-ff1a-411a-9608-8800ef7823e9" name="Default Changelist" comment="" />
-      <created>1553635337316</created>
+      <changelist id="d5024e19-4d16-4687-b743-f77ac5c060fb" name="Default Changelist" comment="" />
+      <created>1554108246215</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1553635337316</updated>
-      <workItem from="1553635360077" duration="2266000" />
-      <workItem from="1553639459030" duration="1400000" />
-      <workItem from="1553641130107" duration="86000" />
-      <workItem from="1553716686677" duration="596000" />
-      <workItem from="1553797584991" duration="598000" />
-      <workItem from="1553979921926" duration="2361000" />
-      <workItem from="1554023776437" duration="853000" />
-      <workItem from="1554025379755" duration="12936000" />
-      <workItem from="1554043992035" duration="8635000" />
-      <workItem from="1554108224658" duration="21000" />
+      <updated>1554108246215</updated>
+      <workItem from="1554108249228" duration="2692000" />
+      <workItem from="1554144361330" duration="3490000" />
+      <workItem from="1554195814094" duration="8126000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29752000" />
+    <option name="totallyTimeSpent" value="14308000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13614263" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2560778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17503925" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32967034" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32967034" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.14835165" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.24198553" />
+      <window_info anchor="bottom" id="CMake" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -153,12 +180,41 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/5.3.0/include/c++/bits/basic_string.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        <state relative-caret-position="34">
+          <caret line="5261" selection-start-line="5261" selection-end-line="5261" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Mad_scientist.bmp">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+            <marker date="1554226697129" expanded="true" signature="3865:4118" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

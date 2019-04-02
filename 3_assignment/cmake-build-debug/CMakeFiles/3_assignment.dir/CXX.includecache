@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/ondra/Desktop/BEZ/3_assignment/main.cpp
+stdlib.h
+-
+string.h
+-
+cctype
+-
+iostream
+-
+iomanip
+-
+algorithm
+-
+fstream
+-
+iterator
+-
+vector
+-
+bitset
+-
+
