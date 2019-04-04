@@ -9,6 +9,8 @@
 /cygdrive/c/Users/ondra/Desktop/BEZ/3_assignment/main.cpp
 stdlib.h
 -
+openssl/evp.h
+-
 string.h
 -
 cctype
