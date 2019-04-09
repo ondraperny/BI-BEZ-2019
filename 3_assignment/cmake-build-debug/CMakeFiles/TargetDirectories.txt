@@ -1,3 +1,3 @@
-/cygdrive/c/Users/ondra/Desktop/BEZ/3_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/c/Users/ondra/Desktop/BEZ/3_assignment/cmake-build-debug/CMakeFiles/3_assignment.dir
-/cygdrive/c/Users/ondra/Desktop/BEZ/3_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ondra/Desktop/BEZ/3_assignment/cmake-build-debug/CMakeFiles/3_assignment.dir
+C:/Users/ondra/Desktop/BEZ/3_assignment/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ondra/Desktop/BEZ/3_assignment/cmake-build-debug/CMakeFiles/rebuild_cache.dir
