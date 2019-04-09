@@ -153,14 +153,13 @@ public:
 
 
 int main(int argc, char *argv[]) {
-    File file;
-
     if ((argc != 4) || ((std::string(argv[1]) != "-e") && ((std::string(argv[1]) != "-d")))
         || ((std::string(argv[2]) != "ecb") && (std::string(argv[2]) != "cbc"))) {
         std::cout << "Spatne volani, format: [ -e | -d ] [ ecb | cbc ] NazevVstupnihoSouboru (pozn. bez koncovky .bmp)" << std::endl;
         return 1;
     }
 
+    File file;
     file.solve(argv[1], argv[2], argv[3]);
 
     return 0;
