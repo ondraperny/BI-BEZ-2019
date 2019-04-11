@@ -1,7 +1,7 @@
 # compiler
 CC = g++
 # compiler flags
-CFLAGS = -std=c++14 -Wall -pedantic
+CFLAGS = -std=c++14 -Wall -pedantic -g
 # libraries
 LIBS = -lcrypto
 

@@ -9,6 +9,9 @@
 #include <iterator>
 #include <vector>
 #include <bitset>
+#include <string.h>
+#include <stdio.h>
+
 
 class File {
     std::ifstream input;
@@ -27,8 +30,9 @@ class File {
     const EVP_CIPHER * evpCipher;
     unsigned char key[EVP_MAX_KEY_LENGTH];  // klic pro sifrovani
     unsigned char iv[EVP_MAX_IV_LENGTH];  // inicializacni vektor
-    int length;
-    int tmpLength;
+
+    int numberOfBlocks, rest;
+    int otLength, stLength;
 
     // copy bmp header
     void copyHeader() {
@@ -73,7 +77,7 @@ class File {
         start = read4bytes(10);
         size = read4bytes(2);
         input.seekg(0,std::ios_base::end);
-        actualSize = input.tellg();
+        actualSize = (long)input.tellg();
         this->actionType = action;
         this->cipherType = cipher;
 
@@ -81,38 +85,63 @@ class File {
         isInputCorrect(input.fail());
 
         output.open(outputName, std::ios::binary);
-        body = new unsigned char[this->actualSize - this->start];
+
+        // length of copied block - works for any value (here is only place where it needs to be changed)
+        otLength = 1024;
+
         input.seekg(start);
-        input.read((char *) &body[0], this->actualSize - this->start);
-        bodyOut = new unsigned char[this->actualSize - this->start]();
+        body = new unsigned char[otLength];
+        bodyOut = new unsigned char[otLength];
+        numberOfBlocks = (this->actualSize - this->start) / otLength;
+        rest = (this->actualSize - this->start) % otLength;
 
         // inicialize crypto variables
-        evpCipher = (cipher == "ecb") ? EVP_des_ecb() : EVP_des_cbc();
         ctx = EVP_CIPHER_CTX_new();
         OpenSSL_add_all_ciphers();
-        length = 0;
-        tmpLength = 0;
     }
 
-    // encryption and decription for both ecb and cbc (based on how were inicialized class variables)
-    void encryption() {
+    // cipher can have wither value "ecb" or "cbc"
+    void encryption(const std::string & cipher) {
+        evpCipher = (cipher == "ecb") ? EVP_des_ecb() : EVP_des_cbc();
         EVP_EncryptInit(ctx, evpCipher, key, iv);
         if (!res) exit(2);
-        EVP_EncryptUpdate(ctx, bodyOut, &length, body, size - start);  // sifrovani ot1
+
+        for(size_t i = 0; i < numberOfBlocks ; ++i) {
+            input.read((char *) &body[0], otLength);
+            EVP_EncryptUpdate(ctx, bodyOut, &stLength, body, otLength);  // sifrovani ot1
+            if (!res) exit(2);
+            output.write((char *) &bodyOut[0], stLength);
+        }
+        input.read((char *) &body[0], rest);
+        EVP_EncryptUpdate(ctx, bodyOut, &stLength, body, rest);  // sifrovani ot1
         if (!res) exit(2);
-        EVP_EncryptFinal(ctx, body + length, &tmpLength);  // dokonceni (ziskani zbytku z kontextu)
+        output.write((char *) &bodyOut[0], stLength);
+
+        EVP_EncryptFinal(ctx, bodyOut, &stLength);  // dokonceni (ziskani zbytku z kontextu)
         if (!res) exit(2);
-        output.write((char *) &bodyOut[0], length + tmpLength);
+        output.write((char *) &bodyOut[0],stLength);
     }
 
-    void decryption() {
+    // cipher can have wither value "ecb" or "cbc"
+    void decryption(const std::string & cipher) {
+        evpCipher = (cipher == "ecb") ? EVP_des_ecb() : EVP_des_cbc();
         res = EVP_DecryptInit(ctx, evpCipher, key, iv);
         if (!res) exit(2);
-        res = EVP_DecryptUpdate(ctx, bodyOut, &length,  body, actualSize - start);
+
+        for(size_t i = 0; i < numberOfBlocks ; ++i) {
+            input.read((char *) &body[0], otLength);
+
+            res = EVP_DecryptUpdate(ctx, bodyOut, &stLength, body, otLength);
+            if (!res) exit(2);
+            output.write((char *) &bodyOut[0], stLength);
+        }
+        input.read((char *) &body[0], rest);
+        res = EVP_DecryptUpdate(ctx, bodyOut, &stLength, body, rest);
         if (!res) exit(2);
-        output.write((char *) &bodyOut[0], length);
-        res = EVP_DecryptFinal(ctx, bodyOut, &length);
-        output.write((char *) &bodyOut[0], length);
+        output.write((char *) &bodyOut[0], stLength);
+
+        res = EVP_DecryptFinal(ctx, bodyOut, &stLength);
+        output.write((char *) &bodyOut[0], stLength);
     }
 
     void isInputCorrect(bool FileNotOpen) {
@@ -137,15 +166,15 @@ public:
         EVP_CIPHER_CTX_free(ctx);
     }
 
-    void solve(std::string a, std::string b, std::string c) {
-        inicialize(a, b, c);
+    void solve(const std::string & action, const std::string & cipher, const std::string & name) {
+        inicialize(action, cipher, name);
         copyHeader();
 
         if (actionType == "-e") {
-            encryption();
+            encryption(cipher);
             std::cout << "Vytvoreny zasifrovany soubor: " << outputName << std::endl;
         } else {
-            decryption();
+            decryption(cipher);
             std::cout << "Vytvoreny desifrovany soubor: " << outputName << std::endl;
         }
     }
