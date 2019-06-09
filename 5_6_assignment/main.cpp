@@ -63,7 +63,7 @@ int main(int argc, char const *argv[]) {
     if (!cert)
         return 1;
 
-    FILE *certificateFile = fopen("certifikat", "w");
+    FILE *certificateFile = fopen("certifikat.pem", "w");
     if (!certificateFile)
         return 1;
     if (!PEM_write_X509(certificateFile, cert))
