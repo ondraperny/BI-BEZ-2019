@@ -1,6 +1,7 @@
 # BI-BEZ-2019
 ## Tasks for Security course.
-Every task is written in C++ and contains makefile.
+Every task is written in C++ and contains makefile.\
+Cryptographic functions were provided by [OpenSSL library.](https://www.openssl.org/)
 
  - 1_assignment - looking for random hash(SHA-256) that begin with 0xAABB
  - 2_assignment - encrypting two messages with stream cipher(RS4) and exploiting
