@@ -1,5 +1,6 @@
 # BI-BEZ-2019
-## Tasks for Security course.
+Tasks for Security course.
+---
 Every task is written in C++ and contains makefile.\
 Cryptographic functions were provided by [OpenSSL library.](https://www.openssl.org/)
 
@@ -10,3 +11,11 @@ Cryptographic functions were provided by [OpenSSL library.](https://www.openssl.
  - 4_assignment - asymetric cryptography - RSA is used to exchange key for synchronous cipher that is used to encrypt file
  - 5/6_assignment - verifying certificate between client and server
  
+ 
+Run program
+---
+Navigate to folder of program you want to run (assignment 1 - 5/6)
+
+    make
+    ./main
+Additional parameters might be required based on which program is chosen (required parameters will be listed when attempt to run program without them).
