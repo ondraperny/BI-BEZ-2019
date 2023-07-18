@@ -1,5 +1,4 @@
-# BI-BEZ-2019
-Tasks for Security course.
+# C++ security challenges
 ---
 Every task is written in C++ and contains makefile.\
 Cryptographic functions were provided by [OpenSSL library.](https://www.openssl.org/)
